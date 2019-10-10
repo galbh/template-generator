@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='TemplateCreator',
     packages=['TemplateCreator'],
-    version='0.5',
+    version='0.6',
     license='MIT',
     description='This project is intended unify boilerplate code between team members and make the setup process for starting a new component shorted and less tedious.',
     author='Gal Ben Haim',
