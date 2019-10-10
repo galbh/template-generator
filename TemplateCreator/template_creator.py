@@ -40,9 +40,9 @@ class TemplatesCreator:
             print(f'{file_name} was written successfully')
 
     def get_template(self, template_name: str):
-        for filename in os.listdir('templates'):
+        for filename in os.listdir('TemplateCreator/templates'):
             if template_name in filename:
-                template_path = normpath(join('templates', filename))
+                template_path = normpath(join('TemplateCreator/templates', filename))
                 string_template = self.file_to_string(template_path)
                 t = Template(string_template)
                 class_name = self.get_component_name(self.folder_name)
