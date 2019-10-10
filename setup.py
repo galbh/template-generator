@@ -3,13 +3,13 @@ from distutils.core import setup
 setup(
     name='TemplateCreator',
     packages=['TemplateCreator'],
-    version='0.6',
+    version='0.7',
     license='MIT',
     description='This project is intended unify boilerplate code between team members and make the setup process for starting a new component shorted and less tedious.',
     author='Gal Ben Haim',
     author_email='gal_ben_haim@yahoo.com',
     url='https://github.com/galbh/template-generator',
-    download_url='https://github.com/galbh/template-generator/archive/v_05.tar.gz',
+    download_url='https://github.com/galbh/template-generator/archive/v_07.tar.gz',
     keywords=['TEMPLATE'],
     install_requires=['jinja2'],
     classifiers=[
