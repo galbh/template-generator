@@ -2,32 +2,22 @@ import os
 from os.path import join, normpath
 from typing import List, Dict
 from jinja2 import Template
-from dataclasses import dataclass
 
-
-@dataclass
-class TemplateOptions:
-    shared_component = 'shared'
-    function_component = 'function-component'
-    styles = 'styles'
-    readme = 'readme'
-    test = 'test'
+from template_options import TemplateInfo, TemplateOptions
 
 
 class TemplatesCreator:
-    template_names: List
+    templates: List[TemplateInfo]
     folder_name: str
-    component_type_to_file_name_dict: Dict
 
     def __init__(self, template_name, folder_name):
-        self.template_names = template_name
         self.folder_name = folder_name
-        self.component_type_to_file_name_dict = {
-            TemplateOptions.function_component: f'{folder_name}.component.jsx',
-            TemplateOptions.styles: f'{folder_name}.styles.js',
-            TemplateOptions.readme: f'{folder_name}.readme.md',
-            TemplateOptions.test: f'{folder_name}.test.jsx'
-        }
+        options = TemplateOptions(folder_name)
+        template_dictionary: Dict[str, List[TemplateInfo]] = options.get_dictionary()
+        self.templates = template_dictionary.get(template_name)
+
+        if not self.templates:
+            raise Exception(f'no templates found for {template_name}')
 
     def create(self):
         self.create_folder()
@@ -43,13 +33,13 @@ class TemplatesCreator:
             print(f'Successfully created the directory {path}')
 
     def create_files(self):
-        for template_name in self.template_names:
-            template = self.get_template(template_name)
-            file_name = self.component_type_to_file_name_dict[template_name]
-            self.write_to_file(template, normpath(join(self.folder_name, file_name)))
+        for template in self.templates:
+            populated_template = self.get_template(template.name)
+            file_name = template.file_name
+            self.write_to_file(populated_template, normpath(join(self.folder_name, file_name)))
             print(f'{file_name} was written successfully')
 
-    def get_template(self, template_name):
+    def get_template(self, template_name: str):
         for filename in os.listdir('templates'):
             if template_name in filename:
                 template_path = normpath(join('templates', filename))
@@ -59,16 +49,16 @@ class TemplatesCreator:
                 return t.render(component_name=class_name)
 
     @staticmethod
-    def file_to_string(path):
+    def file_to_string(path: str):
         with open(path, 'r') as file:
             return file.read()
 
     @staticmethod
-    def write_to_file(file_content, file_name):
+    def write_to_file(file_content: str, file_name: str):
         f = open(file_name, 'w')
         f.write(file_content)
         f.close()
 
     @staticmethod
-    def get_component_name(word):
+    def get_component_name(word: str):
         return ''.join(x.capitalize() or '-' for x in word.split('-')) + 'Component'
