@@ -1,3 +1,3 @@
-from .template_creator import *
-from .template_options import *
+from .template_creator import TemplatesCreator
+from .template_options import TemplateOptions
 name = 'template_generator'
