@@ -1,5 +1,6 @@
 import optparse
-from template_creator import TemplatesCreator, TemplateOptions
+
+from TemplateCreator import TemplatesCreator, TemplateOptions
 
 parser = optparse.OptionParser()
 parser.add_option('-t', '--template',
