@@ -9,7 +9,7 @@ setup(
     author='Gal Ben Haim',
     author_email='gal_ben_haim@yahoo.com',
     url='https://github.com/galbh/template-generator',
-    download_url='https://github.com/galbh/template-generator/archive/v_08.tar.gz',
+    download_url='https://github.com/galbh/template-generator/archive/v_09.tar.gz',
     keywords=['TEMPLATE'],
     install_requires=['jinja2'],
     classifiers=[
