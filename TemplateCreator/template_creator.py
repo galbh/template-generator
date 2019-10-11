@@ -10,6 +10,8 @@ from TemplateCreator.template_options import TemplateInfo
 class TemplatesCreator:
     templates: List[TemplateInfo]
     folder_name: str
+    working_dir = os.path.dirname(os.path.realpath(__file__))
+    templates_dir = join(working_dir, 'templates')
 
     def __init__(self, template_name, folder_name):
         self.folder_name = folder_name
@@ -41,9 +43,9 @@ class TemplatesCreator:
             print(f'{file_name} was written successfully')
 
     def get_template(self, template_name: str):
-        for filename in os.listdir('TemplateCreator/templates'):
+        for filename in os.listdir(self.templates_dir):
             if template_name in filename:
-                template_path = normpath(join('TemplateCreator/templates', filename))
+                template_path = normpath(join(self.templates_dir, filename))
                 string_template = self.file_to_string(template_path)
                 t = Template(string_template)
                 class_name = self.get_component_name(self.folder_name)

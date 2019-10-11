@@ -1,15 +1,21 @@
 from distutils.core import setup
 
+import setuptools
+
 setup(
     name='TemplateCreator',
-    packages=['TemplateCreator'],
-    version='0.9',
+    packages=setuptools.find_packages(),
+    version='0.28',
+    include_package_data = True,
+    package_data={
+        'templates': ['*']
+    },
     license='MIT',
     description='This project is intended unify boilerplate code between team members and make the setup process for starting a new component shorted and less tedious.',
     author='Gal Ben Haim',
     author_email='gal_ben_haim@yahoo.com',
     url='https://github.com/galbh/template-generator',
-    download_url='https://github.com/galbh/template-generator/archive/v_09.tar.gz',
+    download_url='https://github.com/galbh/template-generator/archive/v_28.tar.gz',
     keywords=['TEMPLATE'],
     install_requires=['jinja2'],
     classifiers=[

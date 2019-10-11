@@ -5,3 +5,4 @@ TemplateCreator\__init__.py
 TemplateCreator\__main__.py
 TemplateCreator\template_creator.py
 TemplateCreator\template_options.py
+TemplateCreator\templates\__init__.py
