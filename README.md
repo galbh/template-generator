@@ -2,17 +2,19 @@
 
 This project is intended to unify boilerplate code between team members and make the setup process for starting a new component shorted and less tedious.
 
-```python
-pip install TemplateCreator
+### Installation
+```bash
+python -m pip install TemplateCreator
 ```
 
 ### Usage
 ```bash
-template-generator.py --template shared --folder-name my-example
-or
-template-generator.py -t shared -n my-example
+python -m TemplateCreator --template shared-component --folder-name my-example
 ```  
-
+or use the short syntax
+```bash
+python -m TemplateCreator -t shared-component -n my-example
+```
 Components with name constructed of multiple words should be separated by '-' this will result in camel cased class name (MyExampleComponent)
 
 ### Template options
