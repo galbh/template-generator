@@ -2,6 +2,10 @@
 
 This project is intended to unify boilerplate code between team members and make the setup process for starting a new component shorted and less tedious.
 
+```python
+pip install TemplateCreator
+```
+
 ### Usage
 ```bash
 template-generator.py --template shared --folder-name my-example
