@@ -1,6 +1,6 @@
 # Template Generator
 
-This project is intended unify boilerplate code between team members and make the setup process for starting a new component shorted and less tedious.
+This project is intended to unify boilerplate code between team members and make the setup process for starting a new component shorted and less tedious.
 
 ### Usage
 ```bash
