@@ -3,7 +3,8 @@ from os.path import join, normpath
 from typing import List, Dict
 from jinja2 import Template
 
-from template_options import TemplateInfo, TemplateOptions
+from TemplateCreator.template_options import TemplateOptions
+from TemplateCreator.template_options import TemplateInfo
 
 
 class TemplatesCreator:
