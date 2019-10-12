@@ -11,9 +11,12 @@ TemplateCreator.egg-info/SOURCES.txt
 TemplateCreator.egg-info/dependency_links.txt
 TemplateCreator.egg-info/requires.txt
 TemplateCreator.egg-info/top_level.txt
+TemplateCreator/templates/actions.js
 TemplateCreator/templates/class-component.jsx
 TemplateCreator/templates/css-module.scss
 TemplateCreator/templates/function-component.jsx
 TemplateCreator/templates/readme.md
+TemplateCreator/templates/reducer.js
+TemplateCreator/templates/state.js
 TemplateCreator/templates/styles.js
 TemplateCreator/templates/test.jsx

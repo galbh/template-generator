@@ -16,6 +16,9 @@ class TemplateOptions:
     css_styles: TemplateInfo
     readme: TemplateInfo
     test: TemplateInfo
+    state: TemplateInfo
+    actions: TemplateInfo
+    reducer: TemplateInfo
 
     def __init__(self, folder_name: str):
         self.function_component = TemplateInfo(name='function-component', file_name=f'{folder_name}.component.jsx')
@@ -24,6 +27,9 @@ class TemplateOptions:
         self.css_styles = TemplateInfo(name='css-module', file_name=f'{folder_name}.styles.scss')
         self.readme = TemplateInfo(name='readme', file_name=f'{folder_name}.readme.md')
         self.test = TemplateInfo(name='test', file_name=f'{folder_name}.test.jsx')
+        self.state = TemplateInfo(name='state', file_name=f'{folder_name}.state.js')
+        self.actions = TemplateInfo(name='actions', file_name=f'{folder_name}.actions.js')
+        self.reducer = TemplateInfo(name='reducer', file_name=f'{folder_name}.reducer.js')
 
     def get_dictionary(self):
         return {
@@ -40,5 +46,10 @@ class TemplateOptions:
             'function-component': [
                 self.function_component,
                 self.css_styles
+            ],
+            'state': [
+                self.state,
+                self.reducer,
+                self.actions
             ]
         }
