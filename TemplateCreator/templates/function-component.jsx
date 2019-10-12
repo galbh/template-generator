@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const {{ component_name }} = (props) => {
   return (
-    <div>create vpp</div>
+    <div>{{ component_name }}</div>
   );
 };
 
