@@ -1,9 +1,12 @@
 import React from 'react';
+import { StyledContainer } from './{{ folder_name }}.styles';
 import PropTypes from 'prop-types';
 
 const {{ component_name }} = (props) => {
   return (
-    <div>{{ component_name }}</div>
+    <StyledContainer>
+      {{ component_name }}
+    </StyledContainer>
   );
 };
 

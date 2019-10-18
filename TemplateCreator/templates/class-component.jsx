@@ -1,6 +1,8 @@
 import React, { component } from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './{{ component_name }}.styles.scss';
+
 class {{ component_name }} extends Component {
   constructor(props) {
     super(props);
@@ -8,7 +10,7 @@ class {{ component_name }} extends Component {
   }
   render() {
     return (
-      <div>{{ component_name }}</div>
+      <div className={styles.container}>{{ component_name }}</div>
     );
   }
 }

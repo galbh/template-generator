@@ -50,13 +50,18 @@ class TemplatesCreator:
                 string_template = self.file_to_string(template_path)
                 t = Template(string_template)
                 class_name = self.get_camel_cased_string(self.folder_name)
-                class_name_suffix = self.get_suffix_by_template_name(template_name);
-                return t.render(component_name=class_name + class_name_suffix)
+                class_name_suffix = self.get_suffix_by_template_name(template_name)
+                return t.render(
+                    component_name=class_name + class_name_suffix,
+                    folder_name=self.folder_name
+                )
 
     def get_suffix_by_template_name(self, template_name):
         dictionary = {
             self.options.function_component.name: 'Component',
             self.options.class_component.name: 'Component',
+            self.options.readme.name: 'Component',
+            self.options.test.name: 'Component',
             self.options.state.name: 'State',
             self.options.reducer.name: 'Reducer'
         }

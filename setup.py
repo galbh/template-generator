@@ -5,7 +5,7 @@ import setuptools
 setup(
     name='TemplateCreator',
     packages=setuptools.find_packages(),
-    version='0.30',
+    version='0.34',
     include_package_data = True,
     package_data={
         'templates': ['*']
@@ -15,7 +15,7 @@ setup(
     author='Gal Ben Haim',
     author_email='gal_ben_haim@yahoo.com',
     url='https://github.com/galbh/template-generator',
-    download_url='https://github.com/galbh/template-generator/archive/v_30.tar.gz',
+    download_url='https://github.com/galbh/template-generator/archive/v_34.tar.gz',
     keywords=['TEMPLATE'],
     install_requires=['jinja2'],
     classifiers=[
