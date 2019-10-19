@@ -17,6 +17,7 @@ TemplateCreator/templates/css-module.scss
 TemplateCreator/templates/function-component.jsx
 TemplateCreator/templates/readme.md
 TemplateCreator/templates/reducer.js
+TemplateCreator/templates/service.js
 TemplateCreator/templates/state.js
 TemplateCreator/templates/styles.js
 TemplateCreator/templates/test.jsx

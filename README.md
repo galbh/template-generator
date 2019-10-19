@@ -48,7 +48,7 @@ creates 3 files:
 1. Add a new template file (follow jinja2 convention) to templates folder (for example: my-new-template.jsx) 
 
 2. In template_options.py add TemplateInfo(name='my-new-template', file_name=f'{folder_name}.custom.jsx'). 
-The name attribute should be the same as the template name (without the extension)
+The name attribute should be the same as the template file name (without the extension)
 
-3. Update template_options.py get_dictionary method with a key (passed in as --template parameter) 
+3. Update template_options.py get_batch_templates_dictionary method with a key (passed in as --template parameter) 
 and a value of list of TemplateInfo to create  
