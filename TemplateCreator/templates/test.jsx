@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import GeneralUtils from '../../common/utils.js';
+import { {{ component_name }} } from '../../';
 
 describe('{{ component_name }}', () => {
   let wrapper;

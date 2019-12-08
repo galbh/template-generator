@@ -52,3 +52,13 @@ The name attribute should be the same as the template file name (without the ext
 
 3. Update template_options.py get_batch_templates_dictionary method with a key (passed in as --template parameter) 
 and a value of list of TemplateInfo to create  
+
+### Deploy new version
+1. Create the version file
+```python
+    python setup.py sdist
+```
+2. Deploy the newly created version
+```python
+    python -m twine upload --repository-url https://pypi.org/ dist/TemplateCreator-${new_version}.tar.gz
+```
