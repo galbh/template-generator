@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-import { StyledContainer } from './{{ folder_name }}.styles';
+import StyledContainer from './{{ folder_name }}.styles';
 
 const {{ component_name }} = (props) => {
   return (
