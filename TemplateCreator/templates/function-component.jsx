@@ -1,12 +1,15 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import { StyledContainer } from './{{ folder_name }}.styles';
 import PropTypes from 'prop-types';
 
 const {{ component_name }} = (props) => {
   return (
-    <StyledContainer>
-      {{ component_name }}
-    </StyledContainer>
+    <ThemeProvider theme={{{ component_name }}.theme}>
+      <StyledContainer>
+        {{ component_name }}
+      </StyledContainer>
+    </ThemeProvider>
   );
 };
 
