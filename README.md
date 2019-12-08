@@ -60,5 +60,5 @@ and a value of list of TemplateInfo to create
 ```
 2. Deploy the newly created version
 ```python
-    python -m twine upload --repository-url https://pypi.org/ dist/TemplateCreator-${new_version}.tar.gz
+    python -m twine upload dist/TemplateCreator-${new_version}.tar.gz
 ```
