@@ -26,6 +26,7 @@ class Suffixes:
 class TemplateOptions:
     shared_component: TemplateInfo
     function_component: TemplateInfo
+    ts_function_component: TemplateInfo
     class_component: TemplateInfo
     styles: TemplateInfo
     css_module: TemplateInfo
@@ -33,6 +34,10 @@ class TemplateOptions:
     test: TemplateInfo
     state: TemplateInfo
     actions: TemplateInfo
+    ts_actions: TemplateInfo
+    ts_state: TemplateInfo
+    ts_connected_component: TemplateInfo
+    ts_reducer: TemplateInfo
     reducer: TemplateInfo
     service: TemplateInfo
 
@@ -40,6 +45,14 @@ class TemplateOptions:
         self.shared_component = TemplateInfo(
             name='shared-component',
             file_name=None
+        )
+        self.ts_state = TemplateInfo(
+            name='ts-state',
+            file_name=None
+        )
+        self.ts_reducer = TemplateInfo(
+            name='ts-reducer',
+            file_name=f'{folder_name}.reducer.ts',
         )
         self.function_component = TemplateInfo(
             name='function-component',
@@ -80,6 +93,26 @@ class TemplateOptions:
             suffix=Suffixes.service,
             is_batch=False
         )
+        self.ts_function_component = TemplateInfo(
+            name='ts-function-component',
+            file_name=f'{folder_name}.component.tsx',
+            suffix=Suffixes.component,
+            is_batch=True
+        )
+        self.ts_connected_component = TemplateInfo(
+            name='ts-connected-component',
+            file_name=f'{folder_name}.component.tsx',
+            suffix=Suffixes.component,
+            is_batch=True
+        )
+        self.ts_actions = TemplateInfo(
+            name='ts-actions',
+            file_name=f'{folder_name}.actions.ts'
+        )
+        self.ts_state = TemplateInfo(
+            name='ts-state',
+            file_name=f'{folder_name}.state.ts'
+        )
 
     def get_suffix(self, template_name):
         try:
@@ -109,6 +142,19 @@ class TemplateOptions:
             'function-component': [
                 self.function_component,
                 self.css_module
+            ],
+            'ts-function-component': [
+                self.ts_function_component,
+                self.styles
+            ],
+            'ts-connected-component': [
+                self.ts_connected_component,
+                self.styles
+            ],
+            'ts-state': [
+                self.ts_actions,
+                self.ts_state,
+                self.ts_reducer
             ],
             'state': [
                 self.state,
