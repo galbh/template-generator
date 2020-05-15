@@ -5,7 +5,7 @@ import setuptools
 setup(
     name='TemplateCreator',
     packages=setuptools.find_packages(),
-    version='0.44',
+    version='0.45',
     include_package_data = True,
     package_data={
         'templates': ['*']

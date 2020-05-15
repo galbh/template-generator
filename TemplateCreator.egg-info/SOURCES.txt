@@ -26,3 +26,4 @@ TemplateCreator/templates/ts-connected-component.tsx
 TemplateCreator/templates/ts-function-component.tsx
 TemplateCreator/templates/ts-reducer.ts
 TemplateCreator/templates/ts-state.ts
+TemplateCreator/templates/ts-styles.ts

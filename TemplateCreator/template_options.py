@@ -17,6 +17,7 @@ class TemplateInfo:
 @dataclass
 class Suffixes:
     component = 'Component'
+    page = 'Page'
     reducer = 'Reducer'
     service = 'Service'
     state = 'State'
@@ -40,6 +41,7 @@ class TemplateOptions:
     ts_reducer: TemplateInfo
     reducer: TemplateInfo
     service: TemplateInfo
+    ts_styles: TemplateInfo
 
     def __init__(self, folder_name: str):
         self.shared_component = TemplateInfo(
@@ -65,6 +67,7 @@ class TemplateOptions:
             suffix=Suffixes.component
         )
         self.styles = TemplateInfo(name='styles', file_name=f'{folder_name}.styles.js')
+        self.ts_styles = TemplateInfo(name='ts-styles', file_name=f'{folder_name}.styles.ts')
         self.css_module = TemplateInfo(name='css-module', file_name=f'{folder_name}.styles.scss')
         self.readme = TemplateInfo(
             name='readme',
@@ -101,8 +104,8 @@ class TemplateOptions:
         )
         self.ts_connected_component = TemplateInfo(
             name='ts-connected-component',
-            file_name=f'{folder_name}.component.tsx',
-            suffix=Suffixes.component,
+            file_name=f'{folder_name}.page.tsx',
+            suffix=Suffixes.page,
             is_batch=True
         )
         self.ts_actions = TemplateInfo(
@@ -145,11 +148,11 @@ class TemplateOptions:
             ],
             'ts-function-component': [
                 self.ts_function_component,
-                self.styles
+                self.ts_styles
             ],
             'ts-connected-component': [
                 self.ts_connected_component,
-                self.styles
+                self.ts_styles
             ],
             'ts-state': [
                 self.ts_actions,
