@@ -22,9 +22,15 @@ Components with name constructed of multiple words should be separated by '-' th
 
 --template class_component
 
---template function_component 
+--template function_component
+
+--template ts-function-component
+
+--template ts-connected-component 
 
 --template state
+
+--template ts-state
 
 #### shared-component
 creates 4 files:
@@ -33,16 +39,22 @@ creates 4 files:
 * my-component.readme.md
 * my-component.test.jsx
 
-#### class-component / function-component
+#### class-component / function-component / ts-function-component / ts-connected-component
 creates 2 files:
-* my-component.component.jsx
-* my-component.styles.scss
+* my-component.component.jsx (.tsx)
+* my-component.styles.scss (.tsx)
 
 #### state
 creates 3 files:
 * my-state.reducer.js
 * my-state.state.js
 * my-state.actions.js
+
+#### ts-state
+creates 3 files:
+* my-state.reducer.ts
+* my-state.state.ts
+* my-state.actions.ts
 
 ### Add A New Template
 1. Add a new template file (follow jinja2 convention) to templates folder (for example: my-new-template.jsx) 
