@@ -21,3 +21,8 @@ TemplateCreator/templates/service.js
 TemplateCreator/templates/state.js
 TemplateCreator/templates/styles.js
 TemplateCreator/templates/test.jsx
+TemplateCreator/templates/ts-actions.ts
+TemplateCreator/templates/ts-connected-component.tsx
+TemplateCreator/templates/ts-function-component.tsx
+TemplateCreator/templates/ts-reducer.ts
+TemplateCreator/templates/ts-state.ts
