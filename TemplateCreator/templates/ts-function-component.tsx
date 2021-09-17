@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyledContainer } from './{{ folder_name }}.styles';
+import StyledContainer from './{{ folder_name }}.styles';
 
 export interface {{ component_name }}Props {
   
 }
 
-const {{ component_name }}: React.SFC<{{ component_name }}Props> = (props) => {
+const {{ component_name }}: React.FC<{{ component_name }}Props> = (props) => {
   return (
-      <StyledContainer>{{ component_name }}</StyledContainer>
+    <StyledContainer>{{ component_name }}</StyledContainer>
   );
 }
  
